@@ -5,7 +5,7 @@ type MovieResponse = {
 };
 
 export async function getMovies(type: "popular" | "top_rated" | "upcoming") {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/movies?type=${type}`, {
+  const res = await fetch(`/api/movies?type=${type}`, {
     cache: "no-store",
   });
 
